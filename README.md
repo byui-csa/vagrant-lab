@@ -31,7 +31,7 @@ If you chose to not install Git, you may download the vagrantfile and run `vagra
 ```bash
 mkdir vagrant-prccdc
 cd vagrant-prccdc
-wget https://github.com/byui-csa/vagrant-prccdc/blob/main/Vagrantfile
+wget https://raw.githubusercontent.com/byui-csa/vagrant-prccdc/main/Vagrantfile
 vagrant up
 ```
 
