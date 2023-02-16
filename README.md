@@ -8,7 +8,8 @@ Install all of the following applications in order to run Vagrant.
 
 - [VirtualBox](https://www.virtualbox.org/wiki/Downloads#VirtualBox7.0.6platformpackages): Virtualization platform
 - [VirtualBox Extension Pack](https://www.virtualbox.org/wiki/Downloads#VirtualBox7.0.6OracleVMVirtualBoxExtensionPack): Extension that improve user experience
-- [Vagrant](https://developer.hashicorp.com/vagrant/downloads): CLI tool that automates the creation of virtual machines AKA boxes
+- [Vagrant](https://developer.hashicorp.com/vagrant/downloads): CLI automation of creating boxes AKA virtual machines
+- [Git](https://git-scm.com/downloads): Optional, tool for downloading and collaborating on code
 
 ## Getting Started
 
@@ -23,6 +24,17 @@ vagrant up
 On first run, `vagrant up` will download the boxes.
 Be patient, this may take several minutes.
 
+### Alternative Setup
+
+If you chose to not install Git, you may download the vagrantfile and run `vagrant up`:
+
+```bash
+mkdir vagrant-prccdc
+cd vagrant-prccdc
+wget https://github.com/byui-csa/vagrant-prccdc/blob/main/Vagrantfile
+vagrant up
+```
+
 ### Troubleshooting
 
 Most users should be able to just start the machines with `vagrant up`,
@@ -33,7 +45,7 @@ to each vagrant command. For example:
 vagrant up --provider virtualbox
 ```
 
-## Virtual Machines
+## Boxes AKA Virtual Machines
 
 ### Default Credentials
 
