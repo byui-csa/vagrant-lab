@@ -17,7 +17,7 @@ Install all of the following applications in order to run Vagrant.
 Clone this repo, open it in a terminal, and run `vagrant up`:
 
 ```
-git clone https://github.com/byui-csa/vagrant-lab.git
+git clone https://github.com/byui-soc/vagrant-lab.git
 cd vagrant-lab
 vagrant up
 ```
@@ -31,14 +31,14 @@ If you chose to not install Git, you may download the vagrantfile and run `vagra
 
 ```
 mkdir vagrant-lab && cd vagrant-lab
-wget https://raw.githubusercontent.com/byui-csa/vagrant-lab/main/Vagrantfile
+wget https://raw.githubusercontent.com/byui-soc/vagrant-lab/main/Vagrantfile
 vagrant up
 ```
 
 ### Troubleshooting
 
 Most users should be able to just start the machines with `vagrant up`,
-but some  users may need to add `--provider virtualbox`
+but some linux users may need to add `--provider virtualbox`
 to each vagrant command. For example:
 
 ```
