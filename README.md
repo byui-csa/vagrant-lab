@@ -1,4 +1,4 @@
-# Vagrant PRCCDC
+# Vagrant Lab
 
 __Metasploitable 3__ virtual machines to be used for preparing for PRCCDC (or any defense competion).
 
