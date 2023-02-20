@@ -73,7 +73,7 @@ Connect to this box by opening up it's GUI through VirtualBox or with SSH:
 vagrant ssh kali
 ```
 
-### Troubleshooting
+#### Troubleshooting
 
 If the GUI doesn't automatically resize, turn 
 "Auto-resize Guest Display" off and on.
