@@ -37,8 +37,9 @@ vagrant up
 
 ### Troubleshooting
 
-Most users should be able to just start the machines with `vagrant up`, but some 
-users may need to add `--provider virtualbox` to each vagrant command. For example:
+Most users should be able to just start the machines with `vagrant up`,
+but some  users may need to add `--provider virtualbox`
+to each vagrant command. For example:
 
 ```
 vagrant up --provider virtualbox
@@ -71,6 +72,11 @@ Connect to this box by opening up it's GUI through VirtualBox or with SSH:
 ```
 vagrant ssh kali
 ```
+
+### Troubleshooting
+
+If the GUI doesn't automatically resize, turn 
+"Auto-resize Guest Display" off and on.
 
 ### Ubuntu 14.04
 
