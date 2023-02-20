@@ -10,6 +10,7 @@ Vagrant.configure('2') do |config|
     kali.vm.network 'private_network', ip: '192.168.50.101', virtualbox__intnet: true
     kali.vm.provider 'virtualbox' do |vb|
       vb.name = 'vagrant-lab-kali'
+      vb.gui = true
       vb.cpus = 2
       vb.memory = 2048
       vb.customize ['modifyvm', :id, '--vram', '128']
