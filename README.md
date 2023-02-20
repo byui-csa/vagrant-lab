@@ -1,6 +1,6 @@
 # Vagrant Lab
 
-__Metasploitable 3__ virtual machines to be used for preparing for PRCCDC (or any defense competion).
+__Kali__ and __Metasploitable 3__ virtual machines to be used for practice and competition preparation.
 
 ## Dependencies
 
