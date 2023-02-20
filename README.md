@@ -17,8 +17,8 @@ Install all of the following applications in order to run Vagrant.
 Clone this repo, open it in a terminal, and run `vagrant up`:
 
 ```
-git clone https://github.com/byui-csa/vagrant-prccdc.git
-cd vagrant-prccdc
+git clone https://github.com/byui-csa/vagrant-lab.git
+cd vagrant-lab
 vagrant up
 ```
 
@@ -30,9 +30,8 @@ Be patient, this may take several minutes.
 If you chose to not install Git, you may download the vagrantfile and run `vagrant up`:
 
 ```
-mkdir vagrant-prccdc
-cd vagrant-prccdc
-wget https://raw.githubusercontent.com/byui-csa/vagrant-prccdc/main/Vagrantfile
+mkdir vagrant-lab && cd vagrant-lab
+wget https://raw.githubusercontent.com/byui-csa/vagrant-lab/main/Vagrantfile
 vagrant up
 ```
 
