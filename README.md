@@ -1,6 +1,7 @@
 # Vagrant Lab
 
 __Kali__ and __Metasploitable 3__ virtual machines to be used for practice and competition preparation.
+Running all 3 machines will use 5 GB RAM and 4 CPUs/cores/processors.
 
 ## Dependencies
 
