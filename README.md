@@ -38,26 +38,40 @@ vagrant up
 ### Troubleshooting
 
 Most users should be able to just start the machines with `vagrant up`,
-but some linux users may need to add `--provider virtualbox`
+but some Linux users may need to add `--provider virtualbox`
 to each vagrant command. For example:
 
 ```
 vagrant up --provider virtualbox
 ```
 
-## Additional Commands
+## Essentials
 
-- `vagrant up [<name>]`: Start boxes
-- `vagrant ssh <name>`: SSH into a specific box
-- `vagrant halt [<name>]`: Stop boxes
-- `vagrant destroy [<name>]`: Destroy boxes
-
-## Boxes AKA Virtual Machines
-
-### Default Credentials
+### Credentials
 
 - User: `vagrant`
 - Password: `vagrant`
+
+### Commands
+
+- `vagrant up [<name>]`: Start boxes
+- `vagrant ssh <name>`: SSH into a specific Linux box
+- `vagrant halt [<name>]`: Stop boxes
+- `vagrant destroy [<name>]`: Destroy boxes
+
+### Vagrant Names
+
+- Kali: `kali`
+- Ubuntu: `ubuntu`
+- Windows: `windows`
+
+### IP Addresses
+
+- Kali: `192.168.50.101`
+- Ubuntu: `192.168.50.102`
+- Windows: `192.168.50.103`
+
+## Boxes AKA Virtual Machines
 
 ### Kali
 
