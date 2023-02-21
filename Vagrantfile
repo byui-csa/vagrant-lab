@@ -7,7 +7,7 @@ Vagrant.configure('2') do |config|
   config.vm.define 'kali', primary: true do |kali|
     kali.vm.box = 'kalilinux/rolling'
     kali.vm.hostname = 'vagrant-lab-kali'
-    kali.vm.network 'private_network', ip: '192.168.50.101', virtualbox__intnet: true
+    kali.vm.network 'private_network', ip: '192.168.50.101', virtualbox__intnet: 'vagrant-lab'
     kali.vm.provider 'virtualbox' do |vb|
       vb.name = 'vagrant-lab-kali'
       vb.gui = true
@@ -23,7 +23,7 @@ Vagrant.configure('2') do |config|
     ubuntu.vm.hostname = 'vagrant-lab-ubuntu'
     ubuntu.ssh.username = 'vagrant'
     ubuntu.ssh.password = 'vagrant'
-    ubuntu.vm.network 'private_network', ip: '192.168.50.102', virtualbox__intnet: true
+    ubuntu.vm.network 'private_network', ip: '192.168.50.102', virtualbox__intnet: 'vagrant-lab'
 
     # Providers
     ubuntu.vm.provider 'virtualbox' do |vb|
@@ -41,7 +41,7 @@ Vagrant.configure('2') do |config|
     windows.vm.communicator = 'winrm'
     windows.winrm.retry_limit = 60
     windows.winrm.retry_delay = 10
-    windows.vm.network 'private_network', ip: '192.168.50.103', virtualbox__intnet: true
+    windows.vm.network 'private_network', ip: '192.168.50.103', virtualbox__intnet: 'vagrant-lab'
 
     # Configure Firewall to open up vulnerable services
     windows.vm.provision :shell, inline: 'C:\\startup\\disable_firewall.bat' # easy
