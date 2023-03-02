@@ -1,7 +1,8 @@
 # Vagrant Lab
 
-__Kali__ and __Metasploitable 3__ virtual machines to be used for practice and competition preparation.
-Running all 3 machines will use 5 GB RAM and 4 CPUs/cores/processors.
+__Kali__, __Ubuntu 18.04__, and __Metasploitable 3__ virtual machines to be 
+used for practice and competition preparation.
+Running all 4 machines will use 6 GB RAM and 5 CPUs/cores/processors.
 
 ## Dependencies
 
@@ -35,17 +36,15 @@ wget https://raw.githubusercontent.com/byui-soc/vagrant-lab/main/Vagrantfile
 vagrant up
 ```
 
-### Troubleshooting
-
-Most users should be able to just start the machines with `vagrant up`,
-but some Linux users may need to add `--provider virtualbox`
-to each vagrant command. For example:
-
-```
-vagrant up --provider virtualbox
-```
-
 ## Essentials
+
+It is recommended to only turn on the boxes you are using,
+such as `vagrant up kali` and `vagrant up ub1804`.
+This will preserve your computers processing power.
+
+Always run `vagrant halt` when you are done.
+Leaving virtual machines running will drastically
+decrease your battery life.
 
 ### Credentials
 
@@ -59,60 +58,35 @@ vagrant up --provider virtualbox
 - `vagrant halt [<name>]`: Stop boxes
 - `vagrant destroy [<name>]`: Destroy boxes
 
-### Vagrant Names
-
-- Kali: `kali`
-- Ubuntu: `ubuntu`
-- Windows: `windows`
-
-### IP Addresses
-
-- Kali: `192.168.50.101`
-- Ubuntu: `192.168.50.102`
-- Windows: `192.168.50.103`
-
 ## Boxes AKA Virtual Machines
 
-### Kali
+|Box                     |Name    | Internal IP    |Connection          |
+|:----------------------:|:------:|:--------------:|:------------------:|
+|Kali                    |`kali`  |`192.168.50.101`|VirtualBox          |
+|Ubuntu 18.04            |`ub1804`|`192.168.50.102`|`vagrant ssh <name>`|
+|Metasploitable 3 Ubuntu |`ub1404`|`192.168.50.103`|`vagrant ssh <name>`|
+|Metasploitable 3 Windows|`win2k8`|`192.168.50.104`|VirtualBox          |
 
-If you just want to start this box, you can start it with:
+## Troubleshooting
 
-```
-vagrant up kali
-```
+### Shared Clipboard
 
-Connect to this box by opening up it's GUI through VirtualBox or with SSH:
+If your shared clipboard isn't working, poweroff and
+launch Kali by double clicking on it in VirtualBox.
 
-```
-vagrant ssh kali
-```
-
-#### Troubleshooting
-
-If the GUI doesn't automatically resize, turn 
-"Auto-resize Guest Display" off and on.
-
-### Ubuntu 14.04
-
-If you just want to start this box, you can start it with:
+If still not working, run:
 
 ```
-vagrant up ubuntu
+sudo apt install linux-headers-$(uname -r)
 ```
 
-Connect to this box with SSH:
+### Libvirt
+
+Most users should be able to just start the machines with `vagrant up`,
+but some Linux users may need to add `--provider virtualbox`
+to each vagrant command. For example:
 
 ```
-vagrant ssh ubuntu
+vagrant up --provider virtualbox
 ```
-
-### Windows Server 2008
-
-If you just want to start this box, you can start it with:
-
-```
-vagrant up windows
-```
-
-Connect to this box by opening up it's GUI through VirtualBox.
 
